@@ -3,11 +3,19 @@ const modalCloseBtn = document.getElementById("modal-close-btn");
 const consentForm = document.getElementById("consent-form");
 const modalText = document.getElementById("modal-text");
 const modalInner = document.getElementById("modal-inner");
+const declineBtn = document.getElementById("decline-btn");
 
+setTimeout(function(){
+    modal.style.display = "inline";
+}, 1500);
 
 modalCloseBtn.addEventListener("click", function(){
     modal.style.display = "none";
 });
+
+declineBtn.addEventListener("mouseover", function(){
+    document.getElementById("modal-choice-btns").classList.toggle("reverse");
+})
 
 consentForm.addEventListener("submit", function(e){
     e.preventDefault();
@@ -40,7 +48,3 @@ consentForm.addEventListener("submit", function(e){
     }, 3000);
 
     });
-
-setTimeout(function(){
-    modal.style.display = "inline";
-}, 1500);
