@@ -18,10 +18,8 @@ consentForm.addEventListener("submit", function(e){
                 </p>
             </div>`
 
-    const uploadText = document.getElementById("uploadText");
-
     setTimeout(function(){
-        uploadText.textContent = "Making the sale...";
+        document.getElementById("uploadText").textContent = `Making the sale...`
     }, 1500);
     });
 
