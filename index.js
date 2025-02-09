@@ -1,4 +1,9 @@
 const modal = document.getElementById("modal");
+const modalCloseBtn = document.getElementById("modal-close-btn");
+
+modalCloseBtn.addEventListener("click", function(){
+    modal.style.display = "none";
+});
 
 setTimeout(function(){
     modal.style.display = "inline";
